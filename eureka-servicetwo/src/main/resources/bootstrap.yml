@@ -1,0 +1,11 @@
+#bootstrap.yml比application.yml优先级高，且不会被覆盖。
+#它的加载先于application.yml，像config配置中心这种，只能配置在bootstrap.yml中
+spring:
+  cloud:
+    config: #开始配置SpringCloud Config的配置中心
+      uri: http://127.0.0.1:8088/CONFIG-SERVER #可通过Gateway网关来访问配置中心服务端
+      #      uri: http://127.0.0.1:9001 #也可直接访问Config配置中心服务地址
+      name: cloud-config #配置文件名前缀（不含-dev、-test或-prod，之前的部分）
+      profile: prod #配置文件名后缀（不是扩展名，是扩展名之前的的-dev、-test或-prod）
+#上面的配置，最终会形成一个URL：http://127.0.0.1:9001/cloud-config-dev.yml
+#从而通过它从配置中心服务端获取到配置文件

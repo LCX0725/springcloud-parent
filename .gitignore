@@ -1,0 +1,7 @@
+# Project exclude paths
+/ConfigCenter/target/
+/eureka-service/target/
+/eureka-servicetwo/target/
+/Gateway/target/
+/HystrixDashboard/target/
+/ServiceOneCopy/target/

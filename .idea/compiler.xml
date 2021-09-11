@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-service" />
+        <module name="eureka-servicetwo" />
+        <module name="Gateway" />
+        <module name="ConfigCenter" />
+        <module name="HystrixDashboard" />
+        <module name="eureka-servicethree" />
+        <module name="eureka-serviceone" />
+        <module name="ServiceOneCopy" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ConfigCenter" options="-parameters" />
+      <module name="Gateway" options="-parameters" />
+      <module name="HystrixDashboard" options="-parameters" />
+      <module name="ServiceOneCopy" options="-parameters" />
+      <module name="eureka-service" options="-parameters" />
+      <module name="eureka-serviceone" options="-parameters" />
+      <module name="eureka-servicethree" options="-parameters" />
+      <module name="eureka-servicetwo" options="-parameters" />
+    </option>
+  </component>
+</project>
