@@ -1,0 +1,14 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    #注意：SpringCloud中使用负载均衡和Gateway网关时，都要求应用名称中不能出现下划线，因此应用名称我们用中划线“-”！
+    name: service-one
+
+#eureka客户端配置
+eureka:
+  client:
+    service-url:
+      #配置本客户端要注册的Eureka服务端地址（在服务端对应配置）
+      defaultZone: http://127.0.0.1:8000/eureka/

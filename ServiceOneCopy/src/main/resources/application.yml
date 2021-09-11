@@ -1,0 +1,15 @@
+server:
+  #同一台设备部署，因此需要不同端口
+  port: 8004
+
+spring:
+  application:
+    #服务名称要与需要负载均衡的服务名称一样！
+    name: service-one
+
+#eureka客户端配置（不做改变）
+eureka:
+  client:
+    service-url:
+      #配置本客户端要注册的Eureka服务端地址（在服务端对应配置）
+      defaultZone: http://127.0.0.1:8000/eureka/
